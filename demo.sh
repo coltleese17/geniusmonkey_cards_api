@@ -53,8 +53,8 @@ echo
 MID=$(curl -s $BASE/deck-state | jq '.size / 2 | floor')
 echo "▶️  5. Cut deck exactly in the middle (index $MID)"
 curl -s -X POST $BASE/cut/$MID | jqp '.'
-echo "Deck snapshot after cut (first 10 cards):"
-curl -s $BASE/deck-state | jqp '{top10: .cards[0:10]}'
+echo "Deck snapshot"
+curl -s $BASE/deck-state | jqp '.'
 echo
 
 #####################################################################
