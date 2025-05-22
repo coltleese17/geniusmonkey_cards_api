@@ -57,6 +57,7 @@ If jq is installed the JSON is colour-formatted.
 ## 5 Interactive API docs
 
 Swagger UI:	http://127.0.0.1:8000/docs
+
 ReDoc:	http://127.0.0.1:8000/redoc
 
 Generated automatically from the OpenAPI spec
