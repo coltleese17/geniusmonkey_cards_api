@@ -2,10 +2,8 @@ from fastapi import FastAPI, HTTPException, Body
 from cardapi.deck import DeckService         
 from cardapi.models import Card               
 
-app = FastAPI(title="Deck Dealer API", version="1.1.0")
+app = FastAPI(title="Genius Monkey Deck Dealer API", version="1.1.0")
 service = DeckService()
-
-# -------- existing endpoints (unchanged) -------- #
 
 @app.post("/deal")
 async def deal_card():
@@ -60,8 +58,6 @@ async def rebuild():
         "deck_size": service.deck_size,
         "discard_size": service.discard_size,
     }
-
-# -------- NEW: state-inspection endpoints -------- #
 
 @app.get("/deck-state")
 async def deck_state():

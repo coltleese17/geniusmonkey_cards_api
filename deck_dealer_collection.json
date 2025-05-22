@@ -1,0 +1,170 @@
+{
+  "info": {
+    "name": "Deck Dealer API Demo",
+    "_postman_id": "76632e6f-ee1a-485f-bad1-e1a36087f94d",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Collection generated from demo.sh \u2013 covers every unique endpoint."
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Rebuild deck",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/rebuild",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "rebuild"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Deck state",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/deck-state",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "deck-state"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Discard state",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/discard-state",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "discard-state"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cheat (peek)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/cheat",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "cheat"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Deal card",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/deal",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "deal"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Discard dealt card",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"rank\": \"2\",\n  \"suit\": \"spades\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/discard",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "discard"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Shuffle deck",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/shuffle",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "shuffle"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cut deck (middle)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/cut/26",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "cut",
+            "26"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order deck",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/order",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "order"
+          ]
+        }
+      }
+    }
+  ]
+}
