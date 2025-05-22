@@ -42,7 +42,6 @@ async def test_cut_endpoint(client: AsyncClient):
     # cut at index 10
     await client.post("/cut/10")
     cheat = (await client.get("/cheat")).json()["next_card"]
-    # In canonical deck the 11th card (index 10) is "Jack" of spades? Wait: default ordered list: 2-10, Jack, Queen, King, Ace for spades first; so index 0 is 2 spades, 1 is 3 spades ... 8 is 10 spades, 9 is Jack spades, 10 is Queen spades? Actually 2-10 are 0-8, Jack=9, Queen=10; yes index 10 = Queen spades.
     assert cheat == {"rank": "Queen", "suit": "spades"}
 
 
